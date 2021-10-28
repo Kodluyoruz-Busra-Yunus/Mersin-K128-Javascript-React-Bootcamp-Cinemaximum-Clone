@@ -1,42 +1,38 @@
 import React, { useState } from "react";
+import "./header.css";
 import logo from "./img/cinemaximum_logo.svg";
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  NavbarText,
-} from "reactstrap";
+import goldClass from "./img/gold_class_salon_sizin-black-logo.png";
+import arthouse from "./img/arthouse-icon.png";
 
-const Example = (props) => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggle = () => setIsOpen(!isOpen);
-
+const Header = (props) => {
   return (
-    <div>
-      <Navbar color="light" light expand="md">
-        <NavbarBrand href="/">
-          <img src={logo} alt="cinemaximum" />
-        </NavbarBrand>
-        <NavbarToggler onClick={toggle} />
-        <Collapse isOpen={isOpen} navbar>
-          <Nav className="mr-auto" navbar>
-            <NavItem>
-              <NavLink href="/components/">Menü</NavLink>
-            </NavItem>
-          </Nav>
-        </Collapse>
-      </Navbar>
+    <div className="navbar">
+      <div className="container">
+        <div className="navbar__logo">
+          <img src={logo} />
+        </div>
+        <div className="navbar__menu">
+          <a href="/">Menü</a>
+        </div>
+        <div className="navbar__navigator">
+          <ul style={{ display: "flex" }}>
+            <li>
+              <a href="/">Filmler</a>
+            </li>
+            <li>
+              <a href="/">Sinemalar</a>
+            </li>
+            <li>
+              <img src={goldClass} alt="gold class" />
+            </li>
+            <li>
+              <img src={arthouse} alt="arthouse" />
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   );
 };
 
-export default Example;
+export default Header;
