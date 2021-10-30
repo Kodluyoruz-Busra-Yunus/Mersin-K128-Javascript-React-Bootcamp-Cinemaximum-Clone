@@ -594,6 +594,15 @@ video {
   display: none;
 }
 
+*, ::before, ::after {
+  --tw-border-opacity: 1;
+  border-color: rgba(229, 231, 235, var(--tw-border-opacity));
+}
+
+html {
+  font-family: "Nunito", sans-serif;
+}
+
 .container {
   width: 100%;
 }
@@ -628,6 +637,157 @@ video {
   }
 }
 
+.btn {
+  height: 2rem;
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-weight: 900;
+  font-size: 14px;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, #e5007d 0%, #f54da8 100%);
+  box-shadow: 0 15px 30px 0 rgb(145 15 86 / 15%);
+  color: white;
+}
+
+.btn-light {
+  background-color: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 15px 30px 0 rgb(145 15 86 / 15%);
+  --tw-text-opacity: 1;
+  color: rgba(51, 122, 183, var(--tw-text-opacity));
+}
+
+.btn-light:hover {
+  --tw-text-opacity: 1;
+  color: rgba(230, 0, 126, var(--tw-text-opacity));
+}
+
+.site-search {
+  width: calc(100% - 555px);
+}
+
+.mx-8 {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.ml-10 {
+  margin-left: 2.5rem;
+}
+
+.mr-4 {
+  margin-right: 1rem;
+}
+
+.mr-3 {
+  margin-right: 0.75rem;
+}
+
+.block {
+  display: block;
+}
+
 .flex {
   display: flex;
+}
+
+.hidden {
+  display: none;
+}
+
+.h-20 {
+  height: 5rem;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.h-7 {
+  height: 1.75rem;
+}
+
+.h-10 {
+  height: 2.5rem;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.w-40 {
+  width: 10rem;
+}
+
+.w-0 {
+  width: 0px;
+}
+
+.w-6 {
+  width: 1.5rem;
+}
+
+.w-\[555px\] {
+  width: 555px;
+}
+
+.w-\[52\] {
+  width: 52;
+}
+
+.w-\[52\%\] {
+  width: 52%;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-evenly {
+  justify-content: space-evenly;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.border-l-2 {
+  border-left-width: 2px;
+}
+
+.border-r-2 {
+  border-right-width: 2px;
+}
+
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.pl-8 {
+  padding-left: 2rem;
+}
+
+.focus\:outline-none:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
 }

@@ -1,3 +1,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "Nunito", sans-serif;
+  }
+}
+@layer components {
+  .btn {
+    height: 2rem;
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-weight: 900;
+    font-size: 14px;
+  }
+  .btn-primary {
+    background: linear-gradient(90deg, #e5007d 0%, #f54da8 100%);
+    box-shadow: 0 15px 30px 0 rgb(145 15 86 / 15%);
+    color: white;
+  }
+  .btn-light {
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 15px 30px 0 rgb(145 15 86 / 15%);
+    @apply text-[#337ab7] hover:text-primary-color;
+  }
+  .site-search {
+    width: calc(100% - 555px);
+  }
+}
