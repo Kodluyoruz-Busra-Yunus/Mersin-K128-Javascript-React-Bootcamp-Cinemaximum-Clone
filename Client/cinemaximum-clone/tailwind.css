@@ -28,6 +28,33 @@
   .site-search {
     width: calc(100% - 555px);
   }
+  .title::after,
+  .title::before {
+    content: "";
+    position: absolute;
+    width: calc(50% - 70px);
+    height: 1px;
+    background: white;
+    top: 50%;
+    opacity: 0.4;
+  }
+  .title::before {
+    right: 0;
+  }
+  .title::after {
+    left: 0;
+  }
+  .booking-bar {
+    background-image: linear-gradient(163deg, #e6007e 0%, #e91756 100%);
+  }
+  .booking-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    padding: 3px 15px;
+    border-radius: 3px;
+  }
 }
 .slick-prev,
 .slick-next {

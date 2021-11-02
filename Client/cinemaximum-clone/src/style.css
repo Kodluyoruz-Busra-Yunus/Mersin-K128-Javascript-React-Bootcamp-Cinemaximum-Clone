@@ -663,12 +663,58 @@ html {
   color: rgba(230, 0, 126, var(--tw-text-opacity));
 }
 
+.title::after,
+  .title::before {
+  content: "";
+  position: absolute;
+  width: calc(50% - 70px);
+  height: 1px;
+  background: white;
+  top: 50%;
+  opacity: 0.4;
+}
+
+.title::before {
+  right: 0;
+}
+
+.title::after {
+  left: 0;
+}
+
+.booking-bar {
+  background-image: linear-gradient(163deg, #e6007e 0%, #e91756 100%);
+}
+
+.booking-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 3px 15px;
+  border-radius: 3px;
+}
+
 .absolute {
   position: absolute;
 }
 
+.relative {
+  position: relative;
+}
+
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+}
+
 .bottom-0 {
   bottom: 0px;
+}
+
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .mx-8 {
@@ -692,8 +738,8 @@ html {
   display: none;
 }
 
-.h-28 {
-  height: 7rem;
+.h-\[76px\] {
+  height: 76px;
 }
 
 .h-20 {
@@ -764,11 +810,6 @@ html {
   border-right-width: 2px;
 }
 
-.bg-primary-color {
-  --tw-bg-opacity: 1;
-  background-color: rgba(230, 0, 126, var(--tw-bg-opacity));
-}
-
 .bg-black {
   --tw-bg-opacity: 1;
   background-color: rgba(0, 0, 0, var(--tw-bg-opacity));
@@ -798,6 +839,11 @@ html {
 
 .text-center {
   text-align: center;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
 }
 
 .text-4xl {
