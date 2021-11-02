@@ -1,5 +1,5 @@
 import React from "react";
-import { MDBCol } from "mdbreact";
+
 const Cinemas = () => {
   return (
     <div className="page-container">

@@ -8,7 +8,7 @@
   }
 }
 @layer components {
-  .btn {
+  .butn {
     height: 2rem;
     padding: 5px 10px;
     border-radius: 8px;
@@ -28,4 +28,22 @@
   .site-search {
     width: calc(100% - 555px);
   }
+}
+.slick-prev,
+.slick-next {
+  font-size: 15px !important;
+}
+.slick-prev {
+  left: -55px !important;
+}
+.slick-next {
+  right: -55px !important;
+}
+.slick-prev:before,
+.slick-next:before {
+  content: "" !important;
+  background-color: black !important;
+}
+.hero-slider::-webkit-scrollbar {
+  display: none;
 }
