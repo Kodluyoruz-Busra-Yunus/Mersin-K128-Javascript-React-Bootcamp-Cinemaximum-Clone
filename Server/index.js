@@ -45,8 +45,23 @@ app.get("/:title", async (req, res) => {
 app.post("/", async (req, res) => {
   console.log(req.body);
   db.one(
-    "INSERT INTO movie (title, genre) VALUES($1, $2) RETURNING id",
-    [req.body.title, req.body.genre],
+    "INSERT INTO movie (title, image, director, description, players, technologies, warnings, formats, genre, fragman,comments, rate, duration, date) VALUES($1, $2, $3, $4, $5,$6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING id",
+    [
+      req.body.title,
+      req.body.image,
+      req.body.director,
+      req.body.description,
+      req.body.players,
+      req.body.technologies,
+      req.body.warnings,
+      req.body.formats,
+      req.body.genre,
+      req.body.fragman,
+      req.body.comments,
+      req.body.rate,
+      req.body.duration,
+      req.body.date,
+    ],
     (event) => event.id
   ).then((data) => {
     res.send(data);
